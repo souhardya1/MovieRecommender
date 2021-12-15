@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TMDB</title>
+</head>
+<style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@600&display=swap');
+    body{
+        background-color: rgba(255, 255, 240);
+        font-family: 'Exo 2', sans-serif;
+       };
+</style>
+<body>
+    <h1 style="text-align: center;color: goldenrod ;" "> TMDB Movie Recommender</h1><hr>
+    <h3 style="text-align: center">Enter the Movie Name</h3>
+    <form action="/recommend"method="POST" style="text-align: center">
+          <input type="text" name="movie_name" ><br><br>
+          <input type="submit" name="" value="Recommend">
+    </form>
+
+    {% if movie_list %}
+        
+        <ul style="text-align: center">
+            
+            {% if movie_list!=[] %}
+                <h4 style="text-align: center" id="movie">10 Movie I Recommend you to watch: </h4>
+                {% for i in movie_list: %}
+                    <li>{{ i }}</li>
+                {% endfor %}
+
+            {% elif movie_list==[] %}
+                <p style="text-align: center" >Sorry this movie is not in my database. Try something else</p>
+
+            {% endif %}
+
+            
+         </ul>
+    {% endif %}
+</body>
+</html>
