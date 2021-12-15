@@ -1,3 +1,3 @@
 # MovieRecommender
 
-![Movie Recommender.mp4](https://github.com/souhardya1/MovieRecommender/blob/main/Movie%20Recommender.mp4)
+![Movie Recommender](https://media.giphy.com/media/1GiPMUZT2mmH48rklz/giphy.gif)
